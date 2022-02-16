@@ -25,7 +25,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         id: sending
-        uses: brob/action-add-activity@v1.5
+        uses: brob/action-add-activity@v1.5.1
         with:
           activity_type: ""
           workspace: ${{ secrets.ORBIT_WORKSPACE }}
