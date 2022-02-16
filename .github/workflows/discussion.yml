@@ -23,7 +23,14 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a single command using the runners shell
-      - name: Run a one-line script
+      # echo the github.event payload
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      # echo the github.event payload
+      - name: echo the github.event payload
+        uses: actions/echo@v1
         with:
-          data: ${{github.event}}
-        run: echo Hello, world! ${{github.event}}
+          message: "{{ input.discussion.body }}"
+          message-format: plaintext
+          output-path: /tmp/discussion.txt
