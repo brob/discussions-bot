@@ -24,4 +24,6 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run a one-line script
+        with:
+          data: ${{github.event}}
         run: echo Hello, world! ${{github.event}}
