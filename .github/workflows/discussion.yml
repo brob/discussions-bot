@@ -30,4 +30,4 @@ jobs:
           workspace: ${{ secrets.ORBIT_WORKSPACE }}
           api_key: ${{ secrets.ORBIT_KEY }}
       - name: Get the output
-        run: echo "The output was ${{ steps.sending.outputs.payload }}"
+        run: echo "The output was ${{ steps.sending.outputs.activity }}"
